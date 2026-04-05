@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Noir | Fine Dining Experience</title>
+  <!-- Google Fonts + Font Awesome (icons only) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="logo">NOIR</div>
+    <div class="menu-icon" id="menuToggle"><i class="fas fa-bars"></i></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<main>
+  <!-- HOME section (hero + featured slider + testimonials) -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Experience Fine Dining<br>Like Never Before</h1>
+      <p style="font-size:1.2rem; margin-bottom: 1rem;">Sensory gastronomy, timeless elegance & curated flavors</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn-primary">View Menu</a>
+        <a href="#contact" class="btn-outline">Book Table</a>
+      </div>
+    </div>
+    <div class="scroll-indicator" id="scrollDownBtn">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Featured Dishes Slider -->
+  <div class="container reveal" style="margin-top: -3rem; padding-bottom: 2rem;">
+    <h2 style="text-align:center;">Signature Selections</h2>
+    <p class="section-subtitle" style="text-align:center;">Chef’s curated masterpieces</p>
+    <div class="slider-container">
+      <button class="slider-btn slider-btn-left" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+      <div class="slider-track" id="sliderTrack"></div>
+      <button class="slider-btn slider-btn-right" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+  <!-- Testimonials Section (modern cards) -->
+  <div class="container reveal" style="padding-top: 20px; padding-bottom: 60px;">
+    <h2 style="text-align:center;">Loved by Connoisseurs</h2>
+    <p class="section-subtitle" style="text-align:center;">What our guests say</p>
+    <div class="testimonials-grid" id="testimonialsGrid"></div>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="container reveal" style="padding: 80px 0;">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>Our Story & Essence</h2>
+        <p style="margin-bottom: 1rem;">Rooted in passion and culinary artistry, Noir blends heritage with avant-garde techniques. Every plate tells a story of premium ingredients and devotion.</p>
+        <p style="margin-bottom: 1rem;">Led by Michelin-starred Chef Elena Voss, we celebrate seasonal purity, bold textures, and a dining atmosphere that whispers elegance.</p>
+        <div class="stats" id="statsContainer">
+          <div class="stat"><h3 id="yearsCount">0</h3><p>Years of Excellence</p></div>
+          <div class="stat"><h3 id="customersCount">0</h3><p>Happy Guests</p></div>
+          <div class="stat"><h3 id="dishesCount">0</h3><p>Signature Plates</p></div>
+        </div>
+      </div>
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1974&auto=format" alt="Chef at work">
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section id="menu" class="container reveal" style="padding: 80px 0;">
+    <h2 style="text-align:center;">Culinary Journey</h2>
+    <p class="section-subtitle" style="text-align:center;">Exquisite tastes, crafted moments</p>
+    <div class="menu-tabs" id="menuTabs"></div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="container reveal" style="padding: 80px 0;">
+    <h2 style="text-align:center;">Reserve & Connect</h2>
+    <p class="section-subtitle" style="text-align:center;">We look forward to hosting you</p>
+    <div class="contact-flex">
+      <div>
+        <form id="contactForm" class="contact-form">
+          <input type="text" placeholder="Full Name" id="nameInput" required>
+          <input type="email" placeholder="Email Address" id="emailInput" required>
+          <textarea rows="4" placeholder="Your message / reservation request" id="msgInput"></textarea>
+          <button type="submit" class="btn-primary" style="width:100%">Send Message</button>
+        </form>
+        <div class="info-block" style="margin-top: 2rem;">
+          <p><i class="fas fa-map-marker-alt"></i> 101 Gastronomy Ave, Manhattan, NY</p>
+          <p><i class="fas fa-phone-alt"></i> +1 (212) 555-0890</p>
+          <p><i class="far fa-clock"></i> Tue–Sun: 6pm – 12am</p>
+          <div class="social-icons" style="margin-top: 1rem;">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+          <button id="reserveTableBtn" class="btn-outline" style="margin-top: 1.5rem;">Reserve a Table <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </div>
+      <div class="map">
+        <iframe src="https://maps.google.com/maps?q=Manhattan%20Fine%20Dining&t=&z=14&ie=UTF8&iwloc=&output=embed" height="300" style="border:0; width:100%;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>© 2025 NOIR — where flavors become memories.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
